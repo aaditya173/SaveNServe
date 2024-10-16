@@ -1,0 +1,94 @@
+
+/* Services Section */
+.services-section {
+    padding: 80px 20px;
+    background-color: #f7f9fc;
+    text-align: center;
+  }
+  
+  .services-section h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .service-box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .service {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .service:hover {
+    transform: translateY(-10px);
+  }
+  
+  .service h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2ecc71;
+  }
+  
+  .service p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .how-it-works {
+    padding: 20px 20px;
+    text-align: center;
+  }
+  
+  .how-it-works .steps {
+    display: flex;
+    justify-content: space-around;
+    /* Aligns the cards starting from the left */
+    flex-wrap: nowrap;
+    /* Prevents the cards from wrapping to a new line */
+    overflow-x: auto;
+    /* Allows horizontal scrolling if content overflows */
+    padding: 20px;
+    /* Adds padding around the section */
+    gap: 20px;
+    /* Adds space between the cards */
+  }
+  
+  .how-it-works .step {
+    flex: 0 0 360px;
+    /* Fix each card to 300px width */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    padding: 20px;
+    /* Adds padding inside each card */
+    text-align: center;
+    box-sizing: border-box;
+    /* Ensures padding is included in the card width */
+  }
+  
+  .how-it-works .step img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #f4f4f9;
+  }
+  
+  .how-it-works .step h2 {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  .how-it-works .step p {
+    font-size: 18px;
+    color: #656363;
+  }
