@@ -1,7 +1,5 @@
 <?php
 ob_start();
-// $connection = mysqli_connect("localhost:3307", "root", "");
-// $db = mysqli_select_db($connection, 'demo');
 include("connect.php");
 include '../connection.php';
 if ($_SESSION['name'] == '') {
@@ -94,15 +92,15 @@ $id = $_SESSION['Did'];
             margin-top: 50px;
         }
 
-        a {
-            /* text-decoration: underline; */
-        }
+        /* a {
+            text-decoration: underline;
+        } */
 
         @media (max-width: 767px) {
-            .itm {
-                /* float: left; */
+            /* .itm {
+                float: left;
 
-            }
+            } */
 
             .itm img {
                 width: 350px;

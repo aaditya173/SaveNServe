@@ -1,6 +1,4 @@
  <?php
-//  $connection=mysqli_connect("localhost:3307","root","");
-// $db=mysqli_select_db($connection,'demo');
 include '../connection.php';
 $acc=0;
 $msg=0;
@@ -67,7 +65,7 @@ if(isset($_POST['signup']))
     
     <div class="container">
         <div class="forms">
-            <p style="color:"></p>
+            <!-- <p style="color:"></p> -->
             <div class="form login">
                 <?php
                 if($msg==1){
