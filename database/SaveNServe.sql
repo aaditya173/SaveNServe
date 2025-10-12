@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Oct 11, 2025 at 06:07 PM
+-- Generation Time: Oct 12, 2025 at 01:11 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -57,6 +57,15 @@ CREATE TABLE `delivery_persons` (
   `city` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `delivery_persons`
+--
+
+INSERT INTO `delivery_persons` (`Did`, `name`, `email`, `password`, `city`) VALUES
+(1, 'Test Delivery 01', 'testdelivery01@savenserve.com', '$2y$10$WgRMz9Vv3ZDgeo6m7itmS.tzk7b09W6QPh9c6OeCI4gZCbmsgcZaO', 'haridwar'),
+(2, 'Test Delivery 02', 'testdelivery02@savenserve.com', '$2y$10$FEwafsx2cuA7qweBgWnOpuApOoq5Nfdr3zSsNSa90mADPCwzyGVtS', 'haridwar'),
+(3, 'Test Delivery 03', 'testdelivery03@savenserve.com', '$2y$10$/SqxM7bOLFkeGWRCj.HuGelueacNMIdqIy/PoWsZeH03U7Lg90ZK.', 'haridwar');
+
 -- --------------------------------------------------------
 
 --
@@ -79,6 +88,13 @@ CREATE TABLE `food_donations` (
   `delivery_by` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `food_donations`
+--
+
+INSERT INTO `food_donations` (`Fid`, `name`, `email`, `food`, `type`, `category`, `quantity`, `date`, `address`, `location`, `phoneno`, `assigned_to`, `delivery_by`) VALUES
+(1, 'Test User 01', 'testuser01@savenserve.com', 'Paneer', 'veg', 'raw-food', '100', '2025-10-12 16:39:46', 'Roorkee', 'haridwar', '9988776655', 1, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -92,6 +108,15 @@ CREATE TABLE `login` (
   `password` text NOT NULL,
   `gender` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`id`, `name`, `email`, `password`, `gender`) VALUES
+(1, 'Test User 01', 'testuser01@savenserve.com', '$2y$10$OG2hooOYQlJVU9dIN9ufY.SXpL3ErxLiEC2c25bMqvGul62SeHJnC', 'male'),
+(2, 'Test User 02', 'testuser02@savenserve.com', '$2y$10$8fQQmwSvFmcCuatOTgwK4ewz.cSI2U.xAc5I/w94kW3d5LngYoRsq', 'male'),
+(3, 'Test User 03', 'testuser03@savenserve.com', '$2y$10$qulP5u7gzMtkeVKl4qSMjuThHyR975tAtWIGtpLdod4wqs/23QwbC', 'female');
 
 -- --------------------------------------------------------
 
@@ -109,6 +134,15 @@ CREATE TABLE `ngo` (
   `address` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `ngo`
+--
+
+INSERT INTO `ngo` (`Nid`, `name`, `email`, `phone`, `password`, `location`, `address`) VALUES
+(1, 'Test NGO 01', 'testngo01@savenserve.com', '9988776655', '$2y$10$5ag6IM.d3eu/MAT6ekTARevYW1RVRFSVQ/ZKd7.N5atL9TE303kl2', 'haridwar', 'Roorkee'),
+(2, 'Test NGO 02', 'testngo02@savenserve.com', '9876543210', '$2y$10$Wx5OMlnSeTwCRN.hKUn9mOYadjgoBCUWpiGPneiixKZGFygaxkg56', 'haridwar', 'Roorkee'),
+(3, 'Test NGO 03', 'testngo03@savenserve.com', '9874563210', '$2y$10$qZmQxejxCbqrwLqZ22Nlf.mKas6n.Qv4kO1ir7OUfJUE2zvhM3xPy', 'haridwar', 'Roorkee');
+
 -- --------------------------------------------------------
 
 --
@@ -121,6 +155,13 @@ CREATE TABLE `user_feedback` (
   `email` varchar(255) DEFAULT NULL,
   `message` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user_feedback`
+--
+
+INSERT INTO `user_feedback` (`feedback_id`, `name`, `email`, `message`) VALUES
+(1, 'Test User 01', 'testuser01@savenserve.com', 'Very Good Work');
 
 --
 -- Indexes for dumped tables
@@ -180,31 +221,31 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `delivery_persons`
 --
 ALTER TABLE `delivery_persons`
-  MODIFY `Did` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Did` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `food_donations`
 --
 ALTER TABLE `food_donations`
-  MODIFY `Fid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Fid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `ngo`
 --
 ALTER TABLE `ngo`
-  MODIFY `Nid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Nid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user_feedback`
 --
 ALTER TABLE `user_feedback`
-  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
